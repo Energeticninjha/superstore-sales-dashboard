@@ -35,10 +35,10 @@ A global retailer wants to know where it makes and loses money. This project ans
 - Note: 7 profit values were rounded beyond the 10th decimal place when loading
 
 ### 3. SQL analysis
-All queries are in [`sql/superstore_queries.sql`](sql/superstore_queries.sql).
+All queries are in [`superstore_queries.sql`](superstore_queries.sql).
 
 ### 4. Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](dashboard.png)
 
 KPI cards (total sales, total profit, profit margin), a monthly trend line, profit by market and by category, and slicers for year and market.
 
@@ -48,7 +48,7 @@ KPI cards (total sales, total profit, profit margin), a monthly trend line, prof
 
 1. **APAC is the most profitable market** at about 437.6K profit (12.2% margin), followed by EU (372.8K) and US (286.4K).
 2. **EMEA has the weakest margin at 5.45%**, less than half of APAC, EU and US. Canada has the highest margin (26.6%) but small sales (66.9K).
-3. **Technology and Office Supplies drive profit.** The top region and category pair is Central Technology (135.5K profit). Furniture earns the least, with a margin of roughly 6% in its best region.
+3. **Technology and Office Supplies drive profit.** The top region and category pair is Central Technology (135.5K profit). Furniture appears only once in the top 10 region and category pairs (Central, with a margin of roughly 6%).
 4. **Discounts above 20% are associated with losses:**
 
    | Discount | Order lines | Avg profit per line |
@@ -72,12 +72,11 @@ Note: discount level and product type overlap in this data, so the findings show
 
 ## Repository structure
 ```
-Superstore-Project/
-├── data/
-│   ├── raw/SuperStoreOrders.csv
-│   └── cleaned/superstore_cleaned.csv
-├── sql/superstore_queries.sql
-├── dashboard/superstore_dashboard.pbix
-├── screenshots/dashboard.png
+superstore-sales-dashboard/
+├── SuperStoreOrders.csv          (raw data)
+├── superstore_cleaned.csv        (cleaned data)
+├── superstore_queries.sql        (SQL analysis)
+├── superstore_dashboard.pbix     (Power BI dashboard)
+├── dashboard.png                 (dashboard screenshot)
 └── README.md
 ```
